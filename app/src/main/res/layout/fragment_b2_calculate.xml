@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".B2CalculateFragment"
+    android:background="@drawable/homebg">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/calculate"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="fill_parent"
+        android:layout_height="550dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.496">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Product 1,  Button 1 and 2-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#BBEAB6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="111dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageButton1"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/calc_deskcomp" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="102dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/quantity"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <Button
+                                android:id="@+id/decrementBtn1"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_neg"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txtDisplay1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:gravity="center"
+                                android:text="@string/_0"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/incrementBtn1"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_add"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="102dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/hours_per_day"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <Button
+                                android:id="@+id/decrementBtn2"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_neg"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txtDisplay2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:gravity="center"
+                                android:text="@string/_0"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/incrementBtn2"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_add"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Product 2, Button 3 and 4-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#BBEAB6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="111dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageButton2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/calc_ligth_bulbs" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="102dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/quantity"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <Button
+                                android:id="@+id/decrementBtn3"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_neg"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txtDisplay3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:gravity="center"
+                                android:text="@string/_0"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/incrementBtn3"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAC7C"
+                                android:drawableBottom="@drawable/calc_add"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="102dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/hours_per_day"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <Button
+                                android:id="@+id/decrementBtn4"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_neg"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txtDisplay4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:gravity="center"
+                                android:text="@string/_0"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/incrementBtn4"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAB7C"
+                                android:drawableBottom="@drawable/calc_add"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Product 3, Button 5 and 6-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#BBEAB6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="111dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageButtonC"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/calc_aircon" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="102dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/quantity"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <Button
+                                android:id="@+id/decrementBtn5"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_neg"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txtDisplay5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:gravity="center"
+                                android:text="@string/_0"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/incrementBtn5"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_add"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="102dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/hours_per_day"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <Button
+                                android:id="@+id/decrementBtn6"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_neg"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txtDisplay6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:gravity="center"
+                                android:text="@string/_0"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/incrementBtn6"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_add"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Product 4, Button 7 and 8-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#BBEAB6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="111dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageButtonD"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/calc_ref" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="102dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/quantity"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <Button
+                                android:id="@+id/decrementBtn7"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_neg"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txtDisplay7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:gravity="center"
+                                android:text="@string/_0"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/incrementBtn7"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_add"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="102dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/hours_per_day"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <Button
+                                android:id="@+id/decrementBtn8"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_neg"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txtDisplay8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:gravity="center"
+                                android:text="@string/_0"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/incrementBtn8"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_add"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Product 5, Button 9 and 10-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#BBEAB6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="111dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageButtonE"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/calc_efan" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="102dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/quantity"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <Button
+                                android:id="@+id/decrementBtn9"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_neg"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txtDisplay9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:gravity="center"
+                                android:text="@string/_0"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/incrementBtn9"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_add"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="102dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/hours_per_day"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <Button
+                                android:id="@+id/decrementBtn10"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_neg"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txtDisplay10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:gravity="center"
+                                android:text="@string/_0"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/incrementBtn10"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_add"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Product 6, Button 11 and 12-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_margin="12dp"
+                android:backgroundTint="#BBEAB6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="111dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageButton"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/calc_tv"/>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="102dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/quantity"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <Button
+                                android:id="@+id/decrementBtn11"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_neg"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txtDisplay11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:gravity="center"
+                                android:text="@string/_0"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/incrementBtn11"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_add"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="102dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/hours_per_day"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <Button
+                                android:id="@+id/decrementBtn12"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_neg"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/txtDisplay12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="5dp"
+                                android:gravity="center"
+                                android:text="@string/_0"
+                                android:textColor="#000000"
+                                android:textSize="20sp" />
+
+                            <Button
+                                android:id="@+id/incrementBtn12"
+                                android:layout_width="40dp"
+                                android:layout_height="42dp"
+                                android:layout_gravity="center"
+                                android:backgroundTint="#4BAF7C"
+                                android:drawableBottom="@drawable/calc_add"
+                                android:gravity="center"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/calculateBtn"
+        android:layout_width="213dp"
+        android:layout_height="55dp"
+        android:text="@string/calculate_now"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Electro Tracker</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+    <string name="registration">Registration</string>
+    <string name="username"> Username</string>
+    <string name="full_name"> Full Name</string>
+    <string name="email"> Email</string>
+    <string name="password"> Password</string>
+    <string name="register">Register</string>
+    <string name="login_page">Login Page</string>
+    <string name="back_to_login">Back to Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="quantity">Quantity</string>
+    <string name="_0">0</string>
+    <string name="hours_per_day">Hours Per Day</string>
+    <string name="calculate">Calculate</string>
+    <string name="note_based_from_meralco_philippines_the_rate_for_a_normal_household_is_php11_4348_per_kwh_this_app_mostly_estimates_your_electricity_price_consumption_the_result_may_varies_compared_to_your_official_bill">Note: Based from Meralco Philippines the rate for a normal household is Php11.4348 per kWh. This app mostly estimates your electricity price consumption. The result may varies compared to your official bill.</string>
+    <string name="total_ammount_of_bill">Total Ammount of Bill:</string>
+    <string name="total_kilowatt_used">Total KiloWatt Used:</string>
+    <string name="results">Results</string>
+    <string name="calculate_now">Calculate Now</string>
+    <string name="television">Television</string>
+    <string name="e_fan">E-Fan</string>
+    <string name="computer">Computer</string>
+    <string name="aircon">Aircon</string>
+    <string name="lightings">Lightings</string>
+    <string name="refrigerator">Refrigerator</string>
+    <string name="calculate1">Calculate</string>
+    <string name="electrotracker">ElectroTracker</string>
+    <string name="welcome">Welcome!</string>
+    <string name="let_s_get_started">Let\'s Get Started!</string>
+    <string name="reduce_the_thermal_and_solid_waste_pollution_use_electrotracker_it_can_give_you_awareness_on_what_degree_your_consumption_and_adjust_your_activities">Reduce the thermal and solid waste pollution. Use ElectroTracker it can give you awareness on what degree your consumption and adjust your activities</string>
+    <string name="email_here">email here ??????</string>
+</resources>
